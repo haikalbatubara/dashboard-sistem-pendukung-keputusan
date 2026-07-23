@@ -4,3 +4,4 @@ numpy
 plotly
 tensorflow
 scikit-learn
+gdown==5.2.0
