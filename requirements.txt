@@ -4,5 +4,3 @@ numpy
 plotly
 tensorflow
 scikit-learn
-joblib
-openpyxl
