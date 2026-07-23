@@ -1,0 +1,119 @@
+{
+  "best_config": {
+    "num_layers": 1,
+    "units": 32,
+    "dropout": 0.2,
+    "learning_rate": 0.001
+  },
+  "grid_results": [
+    {
+      "num_layers": 1,
+      "units": 32,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "val_loss": 0.021459486335515976,
+      "val_mae": 0.08424918353557587,
+      "epochs": 60
+    },
+    {
+      "num_layers": 1,
+      "units": 32,
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "val_loss": 0.038242537528276443,
+      "val_mae": 0.12197202444076538,
+      "epochs": 8
+    },
+    {
+      "num_layers": 1,
+      "units": 64,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "val_loss": 0.031693119555711746,
+      "val_mae": 0.10780896246433258,
+      "epochs": 8
+    },
+    {
+      "num_layers": 1,
+      "units": 64,
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "val_loss": 0.034552812576293945,
+      "val_mae": 0.11578221619129181,
+      "epochs": 8
+    },
+    {
+      "num_layers": 2,
+      "units": 32,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "val_loss": 0.04369024187326431,
+      "val_mae": 0.13059207797050476,
+      "epochs": 8
+    },
+    {
+      "num_layers": 2,
+      "units": 32,
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "val_loss": 0.04400535672903061,
+      "val_mae": 0.131194069981575,
+      "epochs": 8
+    },
+    {
+      "num_layers": 2,
+      "units": 64,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "val_loss": 0.0391065813601017,
+      "val_mae": 0.12544089555740356,
+      "epochs": 8
+    },
+    {
+      "num_layers": 2,
+      "units": 64,
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "val_loss": 0.04151376336812973,
+      "val_mae": 0.12342706322669983,
+      "epochs": 8
+    }
+  ],
+  "meta": {
+    "seq_length": 14,
+    "n_features": 7,
+    "feature_cols": [
+      "trx_value_scaled",
+      "layanan_Air",
+      "layanan_E-Wallet",
+      "layanan_Lainnya",
+      "layanan_Listrik",
+      "layanan_Pajak",
+      "layanan_TV_Internet"
+    ],
+    "layanan_list": [
+      "Air",
+      "E-Wallet",
+      "Lainnya",
+      "Listrik",
+      "Pajak",
+      "TV/Internet"
+    ],
+    "train_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "test_months": [
+      11,
+      12
+    ]
+  }
+}

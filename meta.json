@@ -1,0 +1,37 @@
+{
+  "seq_length": 14,
+  "n_features": 7,
+  "feature_cols": [
+    "trx_value_scaled",
+    "layanan_Air",
+    "layanan_E-Wallet",
+    "layanan_Lainnya",
+    "layanan_Listrik",
+    "layanan_Pajak",
+    "layanan_TV_Internet"
+  ],
+  "layanan_list": [
+    "Air",
+    "E-Wallet",
+    "Lainnya",
+    "Listrik",
+    "Pajak",
+    "TV/Internet"
+  ],
+  "train_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "test_months": [
+    11,
+    12
+  ]
+}
