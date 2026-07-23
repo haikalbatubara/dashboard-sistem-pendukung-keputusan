@@ -2,24 +2,9 @@
 ===============================================================================
   04 - DASHBOARD  (BAB 3.3.7)
 ===============================================================================
-  Penulis : Muhammad Haikal Batubara
-  Stage   : Dashboard Development (Streamlit)
-
-  Mengacu Gambar 16 proposal. Halaman:
-    1. Ringkasan       - KPI (total, jumlah transaksi, MAPE, anomali)
-                         + grafik tren harian Aktual vs Prediksi
-                         + distribusi layanan + Top biller
-    2. Tren & Forecast - prediksi LSTM per layanan
-    3. Drilldown       - filter per tanggal/layanan/channel/biller
-    4. Anomali         - deteksi anomali via |aktual - prediksi| / sigma
-    5. Evaluasi Model  - metrik global + per layanan + scatter plot
-
-  Cara menjalankan:
-      streamlit run 04_dashboard.py
-===============================================================================
 """
-
 import os
+import gdown
 import json
 import numpy as np
 import pandas as pd
@@ -105,9 +90,20 @@ h1, h2, h3, h4, h5, p, label, .stMarkdown { color: #d8e8f5 !important; }
 # ---------------------------------------------------------------------------
 @st.cache_data
 def load_dataset_final():
+  
+    file_id = "1epab3xYg0zJ_AiVWjtNYEy--Cqx48hkc"
+
+    os.makedirs(DATA_DIR, exist_ok=True)
+
     path = os.path.join(DATA_DIR, "dataset_final.csv")
+
+    if not os.path.isfile(path):
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, path, quiet=False)
+
     df = pd.read_csv(path, parse_dates=["received_time"])
     df["date"] = df["received_time"].dt.normalize()
+
     return df
 
 @st.cache_data
